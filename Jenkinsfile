@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        sh './gradlew --version'
         sh './gradlew clean build -P env=prod'
       }
     }
